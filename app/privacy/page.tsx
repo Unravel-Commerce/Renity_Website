@@ -325,6 +325,20 @@ const sections = [
     ),
   },
   {
+    id: "website-analytics",
+    label: "Website analytics",
+    content: (
+      <p>
+        On our marketing website (<strong>renityapp.com</strong>) we use{" "}
+        <strong>Plausible Analytics</strong>, a privacy-friendly tool that is{" "}
+        <strong>cookieless</strong> and collects only aggregate statistics (such
+        as page views and referrers). It does not use cookies, does not track
+        you across sites, and does not collect personal data. We do not sell or
+        share this data.
+      </p>
+    ),
+  },
+  {
     id: "changes",
     label: "Changes",
     content: (

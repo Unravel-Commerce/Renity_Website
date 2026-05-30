@@ -126,6 +126,12 @@ Importing a URL pulls content from **other websites**. We don’t control those 
 
 ---
 
+## Website analytics
+
+On our marketing website (**renityapp.com**) we use **Plausible Analytics**, a privacy-friendly tool that is **cookieless** and collects only aggregate statistics (such as page views and referrers). It does not use cookies, does not track you across sites, and does not collect personal data. We do not sell or share this data.
+
+---
+
 ## Changes
 
 We may update this policy and change the date at the top. If the change is important, we’ll try to tell you in the App or by email.

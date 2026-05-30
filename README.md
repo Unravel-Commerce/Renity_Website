@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Contact Form
+
+The contact form (`app/contact`) uses a Next.js Server Action (`app/contact/actions.ts`) — no database or API route. On submit it runs honeypot + optional Cloudflare Turnstile spam checks, validates fields, then sends the submission as an **email via [Resend](https://resend.com)**.
+
+- **Emails are delivered to:** `renity@unravelcommerce.com`
+- **From:** `noreply@renityapp.com` (domain must be verified in Resend)
+- **Reply-to:** set to the submitter's email, so replies go straight back to them
+
+Required env vars: `RESEND_API_KEY` (sending), plus optional `TURNSTILE_SECRET_KEY` / `NEXT_PUBLIC_TURNSTILE_SITE_KEY` (spam protection).
+
 ## Getting Started
 
 First, run the development server:

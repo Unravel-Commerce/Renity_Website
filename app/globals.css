@@ -1,26 +1,181 @@
 @import "tailwindcss";
 
+@theme {
+  --color-renity-primary: #8F7872;
+  --color-renity-secondary: #C9B5B1;
+  --color-renity-bg: #f3f2ed;
+  --color-renity-bg-light: #FAFAFA;
+  --color-renity-white: #FFFFFF;
+  --color-renity-text: #1C1C1E;
+  --color-renity-text-dark: #292929;
+  --color-renity-dark: #292929;
+  --color-renity-text-secondary: #8E8E93;
+  --color-renity-error: #FF3B30;
+  --color-renity-success: #34C759;
+  --color-renity-warning: #FF9500;
+  --color-renity-info: #C7C7CC;
+  --color-renity-border: #E5E5EA;
+  --color-renity-shadow: #C9B5B1;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --renity-primary: #8F7872;
+  --renity-secondary: #C9B5B1;
+  --renity-bg: #f3f2ed;
+  --renity-bg-light: #FAFAFA;
+  --renity-white: #FFFFFF;
+  --renity-text: #1C1C1E;
+  --renity-text-dark: #292929;
+  --renity-dark: #292929;
+  --renity-text-secondary: #8E8E93;
+  --renity-error: #FF3B30;
+  --renity-success: #34C759;
+  --renity-warning: #FF9500;
+  --renity-info: #C7C7CC;
+  --renity-border: #E5E5EA;
+  --renity-shadow: #C9B5B1;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--renity-bg);
+  color: var(--renity-text);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Legal page typography */
+.legal-prose {
+  font-size: 0.9375rem;
+  max-width: 65ch;
+}
+.legal-prose > section {
+  padding-bottom: 2rem;
+  margin-bottom: 0.5rem;
+}
+.legal-prose > section:not(:last-child) {
+  border-bottom: 1px solid var(--renity-border);
+}
+.legal-prose > section:first-child {
+  padding-top: 0;
+}
+.legal-prose h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--renity-text);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  scroll-margin-top: 6rem;
+}
+.legal-prose p {
+  color: var(--renity-text-secondary);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+.legal-prose p:last-child {
+  margin-bottom: 0;
+}
+.legal-prose strong {
+  color: var(--renity-text);
+  font-weight: 600;
+}
+.legal-prose a {
+  color: var(--renity-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--renity-primary);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.15s;
+}
+.legal-prose a:hover {
+  text-decoration-color: transparent;
+}
+.legal-prose ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0.75rem;
+  color: var(--renity-text-secondary);
+  line-height: 1.8;
+}
+.legal-prose li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.legal-prose li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--renity-primary);
+  opacity: 0.5;
+}
+.legal-prose li:last-child {
+  margin-bottom: 0;
+}
+.legal-prose hr {
+  border: none;
+  border-top: 1px solid var(--renity-border);
+  margin: 2rem 0;
+}
+.legal-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.75rem;
+  font-size: 0.8125rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--renity-border);
+}
+.legal-prose th,
+.legal-prose td {
+  border: 1px solid var(--renity-border);
+  padding: 0.625rem 0.875rem;
+  text-align: left;
+  color: var(--renity-text-secondary);
+  line-height: 1.5;
+}
+.legal-prose th {
+  background: var(--renity-bg);
+  color: var(--renity-text);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.legal-prose tr:nth-child(even) td {
+  background: var(--renity-bg-light);
+}
+.legal-prose .info-block {
+  background: var(--renity-bg);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  border-left: 3px solid var(--renity-primary);
+}
+.legal-prose .info-block p {
+  margin-bottom: 0.25rem;
+}
+.legal-prose .info-block p:last-child {
+  margin-bottom: 0;
 }

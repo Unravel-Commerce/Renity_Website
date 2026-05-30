@@ -1,0 +1,24 @@
+# Renity
+
+> Renity is a meal-planning app built for households. Save and organize recipes, plan the week's meals together, cook with AI-assisted step-by-step guidance, and generate shopping lists — all shared in real time with the people you live with.
+
+Renity is published by Unravel AS (Moss, Norway). It is coming soon to the Apple App Store and Google Play.
+
+## Key features
+
+- Shared recipe cookbook: create, organize, and import recipes from URLs; share with household members.
+- Weekly meal planning: plan together, assign who's cooking, with real-time sync.
+- AI cook mode: step-by-step guidance, timers, scaled servings, and multi-recipe cooking.
+- Smart shopping lists: generated automatically from the meal plan, categorized by aisle.
+- Household sync: roles (admin, editor, viewer), invites, and push notifications.
+
+## Pages
+
+- Home: https://renityapp.com/
+- Contact: https://renityapp.com/contact
+- Privacy Policy: https://renityapp.com/privacy
+- Terms of Service: https://renityapp.com/terms
+
+## Contact
+
+- Email: renity@unravelcommerce.com

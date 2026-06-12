@@ -132,6 +132,12 @@ On our marketing website (**renityapp.com**) we use **Plausible Analytics**, a p
 
 ---
 
+## Launch waitlist
+
+If you join the **waitlist** on our website, we store your **email address** with our email provider **Loops**, based on your **consent**, so we can notify you when Renity launches. We won't use it for anything else. You can **unsubscribe** via the link in any email or contact us to be removed at any time.
+
+---
+
 ## Changes
 
 We may update this policy and change the date at the top. If the change is important, we’ll try to tell you in the App or by email.

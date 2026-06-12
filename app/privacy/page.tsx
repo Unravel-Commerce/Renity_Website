@@ -339,6 +339,20 @@ const sections = [
     ),
   },
   {
+    id: "waitlist",
+    label: "Launch waitlist",
+    content: (
+      <p>
+        If you join the <strong>waitlist</strong> on our website, we store your{" "}
+        <strong>email address</strong> with our email provider{" "}
+        <strong>Loops</strong>, based on your <strong>consent</strong>, so we
+        can notify you when Renity launches. We won&rsquo;t use it for anything
+        else. You can <strong>unsubscribe</strong> via the link in any email or
+        contact us to be removed at any time.
+      </p>
+    ),
+  },
+  {
     id: "changes",
     label: "Changes",
     content: (

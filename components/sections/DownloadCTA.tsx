@@ -1,4 +1,5 @@
 import StoreBadge from "../ui/StoreBadge";
+import JoinWaitlistButton from "./JoinWaitlistButton";
 
 export default function DownloadCTA() {
   return (
@@ -12,6 +13,7 @@ export default function DownloadCTA() {
           shopping smarter&nbsp;&mdash; all from one shared place.
         </p>
         <div className="flex flex-col items-center gap-3">
+          <JoinWaitlistButton className="mb-2" />
           <span className="inline-block rounded-full bg-renity-primary/10 px-4 py-1.5 text-xs font-medium tracking-wide text-renity-primary sm:text-sm">
             Coming soon to App Store &amp; Google Play
           </span>

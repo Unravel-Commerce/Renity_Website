@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useCallback, useEffect, useRef } from "react";
+import { useWaitlist } from "./WaitlistProvider";
 
 const NAV_LINKS = [
   { label: "Features", href: "/#features" },
@@ -10,6 +11,7 @@ const NAV_LINKS = [
 ] as const;
 
 export default function Navbar() {
+  const { openWaitlist } = useWaitlist();
   const [open, setOpen] = useState(false);
   const [visible, setVisible] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
@@ -84,12 +86,13 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="/#download"
-              className="rounded-lg bg-renity-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:shadow-md hover:brightness-110"
+            <button
+              type="button"
+              onClick={openWaitlist}
+              className="rounded-lg bg-renity-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:shadow-md hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-renity-primary"
             >
               Download App
-            </a>
+            </button>
           </div>
 
           <button
@@ -151,13 +154,16 @@ export default function Navbar() {
                 </div>
 
                 <div className="mt-4 border-t border-renity-border/50 pt-4">
-                  <a
-                    href="/#download"
-                    onClick={handleLinkClick}
-                    className="block rounded-xl bg-renity-primary px-4 py-4 text-center text-lg font-semibold text-white shadow-sm transition-all hover:shadow-md hover:brightness-110"
+                  <button
+                    type="button"
+                    onClick={() => {
+                      closeMenu();
+                      openWaitlist();
+                    }}
+                    className="block w-full rounded-xl bg-renity-primary px-4 py-4 text-center text-lg font-semibold text-white shadow-sm transition-all hover:shadow-md hover:brightness-110"
                   >
                     Download App
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

@@ -35,6 +35,10 @@ The contact form (`app/contact`) uses a Next.js Server Action (`app/contact/acti
 - **From:** `noreply@renityapp.com` (domain must be verified in Resend)
 - **Reply-to:** set to the submitter's email, so replies go straight back to them
 
+## Launch waitlist
+
+The "Download App" button (navbar) and the "Join the waitlist" button (Download section) open a popup (`components/sections/WaitlistDialog.tsx`). Signups go through a server action (`app/actions/waitlist.ts`) that upserts the contact into **[Loops](https://loops.so)** and subscribes them to the waitlist mailing list (ID hardcoded in the action). Send the launch announcement to that list from the Loops dashboard.
+
 ## Environment variables
 
 Set these in the hosting provider's environment (do **not** commit secrets). `.env.local` is gitignored and is not deployed.
@@ -42,6 +46,7 @@ Set these in the hosting provider's environment (do **not** commit secrets). `.e
 | Variable | Required | Purpose |
 | --- | --- | --- |
 | `RESEND_API_KEY` | Yes | Sending contact-form email via Resend |
+| `LOOPS_API_KEY` | Yes | Waitlist signups — saves contacts to Loops |
 | `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Recommended | Cloudflare Turnstile widget (client) |
 | `TURNSTILE_SECRET_KEY` | Recommended | Cloudflare Turnstile verification (server) |
 
@@ -57,6 +62,7 @@ Repo work is done; the following are config/dashboard tasks owned outside the co
 
 - [ ] **Turnstile:** create a widget; set `NEXT_PUBLIC_TURNSTILE_SITE_KEY` + `TURNSTILE_SECRET_KEY` in host env so spam protection is fully active.
 - [ ] **Resend:** verify `renityapp.com` sending domain (SPF/DKIM); set `RESEND_API_KEY` in host env; rotate any previously exposed key; send a real end-to-end test from the live form.
+- [ ] **Loops:** set `LOOPS_API_KEY` in host env; test a waitlist signup on the live site and confirm the contact appears in the mailing list.
 - [ ] **DNS / HTTPS:** point `renityapp.com`, enable HTTPS, and redirect `www` → apex (keeps canonical/sitemap consistent).
 - [ ] **Plausible:** after deploy, confirm events arrive in the dashboard.
 - [ ] **Content sign-off:** confirm the legal "Last updated" date is current; confirm marketing claims match shipping features.

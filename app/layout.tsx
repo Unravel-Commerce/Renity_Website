@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/layout/Footer";
+import WaitlistProvider from "../components/WaitlistProvider";
 import JsonLd from "../components/seo/JsonLd";
 import { organizationSchema, websiteSchema } from "../lib/structured-data";
 import {
@@ -90,9 +91,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
       >
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
-        <Navbar />
-        <main className="flex flex-1 flex-col">{children}</main>
-        <Footer />
+        <WaitlistProvider>
+          <Navbar />
+          <main className="flex flex-1 flex-col">{children}</main>
+          <Footer />
+        </WaitlistProvider>
       </body>
     </html>
   );

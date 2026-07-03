@@ -86,6 +86,8 @@ export default function RootLayout({
         <Script id="plausible-init" strategy="afterInteractive">
           {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}
         </Script>
+        {/* VariantAI */}
+        <script src="https://variantai.vercel.app/api/snippet/875d2bb4-dabd-4aba-b9f0-2cb9ef33632b" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}

@@ -54,7 +54,8 @@ const sections = [
             <td>
               Account and profile, recipes and other content you add, household
               and sharing data, subscription/usage info, push token if you enable
-              notifications, and URLs you give us for import.
+              notifications, URLs you give us for import, and short voice clips
+              if you use voice features (processed and discarded, never stored).
             </td>
           </tr>
           <tr>
@@ -140,6 +141,11 @@ const sections = [
             our systems, including with AI (see below).
           </li>
           <li>
+            <strong>Voice</strong> — if you use a voice feature, a short audio
+            clip of what you say, only while you&rsquo;re actively recording. We
+            don&rsquo;t store it (see below).
+          </li>
+          <li>
             <strong>Subscriptions</strong> — plan and usage limits, from the app
             stores and our subscription partner.
           </li>
@@ -149,8 +155,8 @@ const sections = [
           </li>
           <li>
             <strong>Device</strong> — we may ask for camera or photo access for
-            profile or recipe pictures. Some data may be cached on your phone so
-            the App loads faster.
+            profile or recipe pictures, or microphone access for voice features.
+            Some data may be cached on your phone so the App loads faster.
           </li>
         </ul>
         <p>
@@ -170,6 +176,7 @@ const sections = [
           <li>Provide the App and your account</li>
           <li>Handle households and sharing</li>
           <li>Run import and cook mode</li>
+          <li>Carry out voice commands (if you use voice features)</li>
           <li>Validate subscriptions</li>
           <li>Send verification codes and service emails</li>
           <li>Send push notifications (if you allow)</li>
@@ -186,20 +193,70 @@ const sections = [
   },
   {
     id: "ai",
-    label: "AI (import & cook mode)",
+    label: "AI (import, cook mode & voice)",
     content: (
       <>
         <p>
           Recipe text may be sent to <strong>Google</strong> (e.g.{" "}
-          <strong>Gemini</strong>) to structure imports or cook steps. Results
-          can be wrong — incomplete or inaccurate. This is{" "}
-          <strong>not</strong> medical or dietary advice. You&rsquo;re
-          responsible for safety and allergies.
+          <strong>Gemini</strong>) to structure imports or cook steps, and voice
+          audio may be sent the same way to understand your spoken request (see{" "}
+          <strong>Voice features &amp; microphone</strong> below). Results can
+          be wrong — incomplete or inaccurate. This is <strong>not</strong>{" "}
+          medical or dietary advice. You&rsquo;re responsible for safety and
+          allergies.
         </p>
         <p>
           We don&rsquo;t use this to make automated decisions about you in a
           legal sense (GDPR Article 22).
         </p>
+      </>
+    ),
+  },
+  {
+    id: "voice",
+    label: "Voice features & microphone",
+    content: (
+      <>
+        <p>
+          Some parts of the App let you speak instead of type — for example,
+          telling your shopping list &ldquo;add two avocados&rdquo;. Here&rsquo;s
+          how that works:
+        </p>
+        <ul>
+          <li>
+            <strong>What we collect</strong> — a short audio clip of what you
+            say, recorded only while you&rsquo;re actively using a voice feature.
+            The App asks for microphone permission the first time you tap a
+            microphone button, and never records in the background — recording
+            only happens while the recording screen is visible, and you can
+            cancel or stop at any time.
+          </li>
+          <li>
+            <strong>Why</strong> — solely to carry out your spoken request, e.g.
+            updating your shopping list.
+          </li>
+          <li>
+            <strong>Who processes it</strong> — the clip is sent over an
+            encrypted connection to our backend (<strong>Supabase</strong>),
+            which passes it to <strong>Google</strong> (<strong>Gemini</strong>)
+            to transcribe and interpret it. Google acts as our data processor
+            and does <strong>not</strong> use your audio to train AI models.
+          </li>
+          <li>
+            <strong>Retention</strong> — <strong>none</strong>. We don&rsquo;t
+            store voice recordings or transcripts anywhere — no database, no
+            file storage, no server logs. Audio is processed in memory and
+            discarded, and the temporary file on your phone is deleted as soon
+            as it&rsquo;s sent. Only the <strong>result</strong> of your command
+            (e.g. the items added to your shopping list) is saved, like anything
+            else you enter in the App.
+          </li>
+          <li>
+            <strong>Your choice</strong> — voice is entirely optional.
+            Everything can be done manually without it, and you can decline or
+            revoke microphone permission at any time in your device settings.
+          </li>
+        </ul>
       </>
     ),
   },
@@ -213,7 +270,7 @@ const sections = [
         </p>
         <ul>
           <li><strong>Supabase</strong> — backend and storage</li>
-          <li><strong>Google</strong> — Gemini AI</li>
+          <li><strong>Google</strong> — Gemini AI (recipe imports, cook mode, voice)</li>
           <li><strong>Loops</strong> — service email</li>
           <li><strong>RevenueCat</strong> — subscription management</li>
           <li><strong>Apple / Google</strong> — payments and push notifications</li>
@@ -389,7 +446,7 @@ export default function PrivacyPage() {
       <div className="flex-1 bg-renity-bg-light">
         <LegalPageLayout
           title="Privacy Policy"
-          lastUpdated="8 April 2026"
+          lastUpdated="3 July 2026"
           intro={
             <>
               Provided by <strong>Unravel AS</strong>. This policy describes how

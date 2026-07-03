@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** 8 April 2026
+**Last updated:** 3 July 2026
 
 **Who is responsible:** **Unravel AS** · Moss, Norway · Org.nr. **934 054 423**  
 **Contact:** renity@unravelcommerce.com
@@ -17,7 +17,7 @@ We follow the **GDPR** and **Norwegian privacy law** (personopplysningsloven). I
 
 | Topic | Summary |
 |--------|---------|
-| **What we collect** | Account and profile, recipes and other content you add, household and sharing data, subscription/usage info, push token if you enable notifications, and URLs you give us for import. |
+| **What we collect** | Account and profile, recipes and other content you add, household and sharing data, subscription/usage info, push token if you enable notifications, URLs you give us for import, and short voice clips if you use voice features (processed and discarded, never stored). |
 | **Why** | To run the App, subscriptions, service emails, optional push notifications, and security. |
 | **Legal bases** | Contract, legitimate interests (e.g. security), consent where needed (e.g. notifications). |
 | **Sharing** | We use providers for hosting, AI, email, subscriptions, and app stores. We do not sell your data. |
@@ -49,11 +49,13 @@ Email: **renity@unravelcommerce.com**
 
 **Import:** URLs you submit; we fetch that page and extract recipe info. Text/images from the page may be processed on our systems, including with **AI** (see below).
 
+**Voice:** if you use a voice feature, a short audio clip of what you say, only while you’re actively recording. We don’t store it (see below).
+
 **Subscriptions:** plan and usage limits, from the app stores and our subscription partner.
 
 **Technical:** e.g. IP address, app version—only as needed to run and secure the service.
 
-**Device:** we may ask for **camera** or **photos** for profile or recipe pictures. **Some data may be cached on your phone** so the App loads faster.
+**Device:** we may ask for **camera** or **photos** for profile or recipe pictures, or the **microphone** for voice features. **Some data may be cached on your phone** so the App loads faster.
 
 We don’t aim to collect sensitive health data; if you type it into a recipe note, that’s your choice.
 
@@ -61,23 +63,39 @@ We don’t aim to collect sensitive health data; if you type it into a recipe no
 
 ## Why we use data (legal bases)
 
-We use your data to: provide the App and your account; handle households and sharing; run import and cook mode; validate subscriptions; send verification codes and service emails; send push notifications if you allow; keep the service secure; and comply with law.
+We use your data to: provide the App and your account; handle households and sharing; run import and cook mode; carry out voice commands if you use voice features; validate subscriptions; send verification codes and service emails; send push notifications if you allow; keep the service secure; and comply with law.
 
 We use **contract**, **legitimate interests** (especially security), and **consent** where required.
 
 ---
 
-## AI (import and cook mode)
+## AI (import, cook mode and voice)
 
-Recipe text may be sent to **Google** (e.g. **Gemini**) to structure imports or cook steps. Results can be wrong—incomplete or inaccurate. This is **not** medical or dietary advice. You’re responsible for safety and allergies.
+Recipe text may be sent to **Google** (e.g. **Gemini**) to structure imports or cook steps, and voice audio may be sent the same way to understand your spoken request (see **Voice features and microphone use** below). Results can be wrong—incomplete or inaccurate. This is **not** medical or dietary advice. You’re responsible for safety and allergies.
 
 We don’t use this to make automated decisions about you in a legal sense (GDPR Article 22).
 
 ---
 
+## Voice features and microphone use
+
+Some parts of the App let you speak instead of type — for example, telling your shopping list “add two avocados”. Here’s how that works:
+
+**What we collect:** a short audio clip of what you say, recorded only while you’re actively using a voice feature. The App asks for **microphone** permission the first time you tap a microphone button, and never records in the background—recording only happens while the recording screen is visible, and you can cancel or stop at any time.
+
+**Why:** solely to carry out your spoken request, e.g. updating your shopping list.
+
+**Who processes it:** the clip is sent over an encrypted connection to our backend (**Supabase**), which passes it to **Google** (**Gemini**) to transcribe and interpret it. Google acts as our data processor and does **not** use your audio to train AI models.
+
+**Retention:** **none**. We don’t store voice recordings or transcripts anywhere—no database, no file storage, no server logs. Audio is processed in memory and discarded, and the temporary file on your phone is deleted as soon as it’s sent. Only the **result** of your command (e.g. the items added to your shopping list) is saved, like anything else you enter in the App.
+
+**Your choice:** voice is entirely optional. Everything can be done manually without it, and you can decline or revoke microphone permission at any time in your device settings.
+
+---
+
 ## Who we share with
 
-We use suppliers including, for example: **Supabase** (backend/storage), **Google** (Gemini), **Loops** (service email), **RevenueCat**, and **Apple** / **Google** (payments and push). They process data on our behalf.
+We use suppliers including, for example: **Supabase** (backend/storage), **Google** (Gemini — recipe imports, cook mode, voice), **Loops** (service email), **RevenueCat**, and **Apple** / **Google** (payments and push). They process data on our behalf.
 
 We may also disclose information if the law requires it, or to protect rights and safety.
 

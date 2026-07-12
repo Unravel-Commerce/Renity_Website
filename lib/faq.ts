@@ -42,6 +42,11 @@ export const FAQ_ITEMS: readonly FaqItem[] = [
       "Three ways: add a recipe manually by typing in the ingredients and steps; import one automatically by pasting a URL, and Renity builds a structured recipe for you; or snap a photo of a recipe from your cookbook and let Renity turn it into a digital recipe. You can edit any recipe and use your own image.",
   },
   {
+    question: "Can I control Renity with my voice?",
+    answer:
+      "Yes. Tap the microphone and just say what you want — add or edit recipes, put items on your shopping list, or get meal suggestions based on what's in your fridge — and Renity carries it out automatically. Voice is optional: everything can also be done manually, recording only happens while you're actively using it, and voice clips are never stored.",
+  },
+  {
     question: "How is my data handled?",
     answer:
       "Renity is provided by Unravel AS, based in Moss, Norway, and follows a GDPR-compliant privacy policy. You control your content and can delete your account at any time.",

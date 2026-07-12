@@ -37,6 +37,14 @@ function CartIcon() {
   );
 }
 
+function MicIcon() {
+  return (
+    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+    </svg>
+  );
+}
+
 function UsersIcon() {
   return (
     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
@@ -85,6 +93,15 @@ const FEATURES = [
       "Roles for every member, real-time updates, and push notifications for assignments and shares. Your whole household, one app.",
     imageSrc: "/assets/feature_sync.png",
     imageAlt: "Family sharing a home-cooked meal together at the dinner table",
+  },
+  {
+    icon: <MicIcon />,
+    title: "Just Say It",
+    description:
+      "Add and edit recipes, drop items on your shopping list, or ask what to cook with what’s in your fridge — all by talking to the app. Renity does the rest.",
+    imageSrc: "/assets/feature_voice.jpg",
+    imageAlt: "Woman speaking a command into her phone while out with a coffee",
+    imagePosition: "60% 40%",
   },
 ];
 

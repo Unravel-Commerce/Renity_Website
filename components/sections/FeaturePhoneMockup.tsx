@@ -5,6 +5,7 @@ interface FeaturePhoneMockupProps {
   description: string;
   imageSrc: string;
   imageAlt: string;
+  imagePosition?: string;
 }
 
 export default function FeaturePhoneMockup({
@@ -12,6 +13,7 @@ export default function FeaturePhoneMockup({
   description,
   imageSrc,
   imageAlt,
+  imagePosition,
 }: FeaturePhoneMockupProps) {
   return (
     <div className="w-[200px] shrink-0 snap-center sm:w-[240px] md:w-[260px]">
@@ -28,6 +30,7 @@ export default function FeaturePhoneMockup({
               alt={imageAlt}
               fill
               className="object-cover"
+              style={imagePosition ? { objectPosition: imagePosition } : undefined}
               sizes="260px"
             />
           </div>

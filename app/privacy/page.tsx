@@ -138,7 +138,9 @@ const sections = [
           <li>
             <strong>Import</strong> — URLs you submit; we fetch that page and
             extract recipe info. Text/images from the page may be processed on
-            our systems, including with AI (see below).
+            our systems, including with AI (see below). Imported images are shown
+            by linking to the original source&mdash;we don&rsquo;t copy them into
+            our storage.
           </li>
           <li>
             <strong>Voice</strong> — if you use a voice feature, a short audio
@@ -446,7 +448,7 @@ export default function PrivacyPage() {
       <div className="flex-1 bg-renity-bg-light">
         <LegalPageLayout
           title="Privacy Policy"
-          lastUpdated="3 July 2026"
+          lastUpdated="23 September 2026"
           intro={
             <>
               Provided by <strong>Unravel AS</strong>. This policy describes how

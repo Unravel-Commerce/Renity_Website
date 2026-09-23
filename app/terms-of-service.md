@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Last updated:** 8 April 2026
+**Last updated:** 23 September 2026
 
 **Provided by:** **Unravel AS** · Moss, Norway · Org.nr. **934 054 423**  
 **Contact:** renity@unravelcommerce.com
@@ -17,6 +17,7 @@ These **Terms** govern your use of **Renity** (the “**App**”). By using the 
 - You’re responsible for your account and what you upload or import.  
 - Paid plans go through **Apple** or **Google**; their rules apply to payments and refunds.  
 - The App is provided **as is**, with liability limits allowed by law.  
+- Imports are yours to start for personal use; report copyright issues and we remove infringing content promptly.  
 - We may update these Terms; check the date above.
 
 ---
@@ -52,6 +53,8 @@ We may remove content or accounts if we reasonably need to.
 ## 4. Importing from websites
 
 When you paste a **URL**, we **fetch** that page to build a recipe. We may pull **text and images**. You must respect **copyright** and each site’s **terms**. We don’t guarantee the import will work or that your use is lawful.
+
+Imports are **started by you**, for your **personal, non-commercial** use. Imported text and images stay subject to the rights of their **original owners** and don’t become your content—we link to the publisher’s own image rather than copying it into our storage. If you believe imported content infringes your rights, see **Copyright and takedown** (section 17) below.
 
 You can **replace** the default image with your own photo anytime—and we encourage you to do so.
 
@@ -142,7 +145,22 @@ If one part of these Terms is invalid, the rest stays. We may assign our side of
 
 ---
 
-## 17. Contact
+## 17. Copyright and takedown
+
+We respect intellectual-property rights and expect you to do the same. Because imports pull material from other websites, content in the App may include work owned by others.
+
+If you believe something in the App infringes your copyright, email **renity@unravelcommerce.com** with **“Copyright”** in the subject. Please include:
+
+- identification of the **work** you say is infringed;  
+- the **recipe or URL** in the App in question, so we can find it;  
+- your **contact details**;  
+- a statement that you believe **in good faith** the use isn’t authorised by the owner, its agent, or the law.
+
+We’ll review reports and **promptly remove or disable access** to content we find infringing, and we may **suspend accounts** of repeat infringers.
+
+---
+
+## 18. Contact
 
 **Unravel AS** · Moss, Norway · Org.nr. **934 054 423**  
 **renity@unravelcommerce.com**  

@@ -31,6 +31,10 @@ const sections = [
           The App is provided <strong>as is</strong>, with liability limits
           allowed by law.
         </li>
+        <li>
+          Imports are yours to start for personal use; report copyright issues
+          and we remove infringing content promptly.
+        </li>
         <li>We may update these Terms; check the date above.</li>
       </ul>
     ),
@@ -106,6 +110,16 @@ const sections = [
           You must respect <strong>copyright</strong> and each site&rsquo;s{" "}
           <strong>terms</strong>. We don&rsquo;t guarantee the import will work
           or that your use is lawful.
+        </p>
+        <p>
+          Imports are <strong>started by you</strong>, for your{" "}
+          <strong>personal, non-commercial</strong> use. Imported text and
+          images stay subject to the rights of their{" "}
+          <strong>original owners</strong> and don&rsquo;t become your
+          content&mdash;we link to the publisher&rsquo;s own image rather than
+          copying it into our storage. If you believe imported content infringes
+          your rights, see <strong>Copyright and takedown</strong> (section 17)
+          below.
         </p>
         <p>
           You can <strong>replace</strong> the default image with your own photo
@@ -293,8 +307,51 @@ const sections = [
     ),
   },
   {
+    id: "copyright",
+    label: "17. Copyright and takedown",
+    content: (
+      <>
+        <p>
+          We respect intellectual-property rights and expect you to do the same.
+          Because imports pull material from other websites, content in the App
+          may include work owned by others.
+        </p>
+        <p>
+          If you believe something in the App infringes your copyright, email{" "}
+          <a href="mailto:renity@unravelcommerce.com?subject=Copyright">
+            renity@unravelcommerce.com
+          </a>{" "}
+          with <strong>&ldquo;Copyright&rdquo;</strong> in the subject. Please
+          include:
+        </p>
+        <ul>
+          <li>
+            identification of the <strong>work</strong> you say is infringed;
+          </li>
+          <li>
+            the <strong>recipe or URL</strong> in the App in question, so we can
+            find it;
+          </li>
+          <li>
+            your <strong>contact details</strong>;
+          </li>
+          <li>
+            a statement that you believe <strong>in good faith</strong> the use
+            isn&rsquo;t authorised by the owner, its agent, or the law.
+          </li>
+        </ul>
+        <p>
+          We&rsquo;ll review reports and{" "}
+          <strong>promptly remove or disable access</strong> to content we find
+          infringing, and we may <strong>suspend accounts</strong> of repeat
+          infringers.
+        </p>
+      </>
+    ),
+  },
+  {
     id: "contact",
-    label: "17. Contact",
+    label: "18. Contact",
     content: (
       <div className="info-block">
         <p><strong>Unravel AS</strong> · Moss, Norway · Org.nr. 934 054 423</p>
@@ -319,7 +376,7 @@ export default function TermsPage() {
       <div className="flex-1 bg-renity-bg-light">
         <LegalPageLayout
           title="Terms of Service"
-          lastUpdated="8 April 2026"
+          lastUpdated="23 September 2026"
           intro={
             <>
               These Terms govern your use of <strong>Renity</strong> (the

@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** 3 July 2026
+**Last updated:** 23 September 2026
 
 **Who is responsible:** **Unravel AS** · Moss, Norway · Org.nr. **934 054 423**  
 **Contact:** renity@unravelcommerce.com
@@ -47,7 +47,7 @@ Email: **renity@unravelcommerce.com**
 
 **Sharing:** when you share with someone (household or by email), we process what’s needed to do that, including emails or notifications.
 
-**Import:** URLs you submit; we fetch that page and extract recipe info. Text/images from the page may be processed on our systems, including with **AI** (see below).
+**Import:** URLs you submit; we fetch that page and extract recipe info. Text/images from the page may be processed on our systems, including with **AI** (see below). Imported images are shown by **linking to the original source**—we don’t copy them into our storage.
 
 **Voice:** if you use a voice feature, a short audio clip of what you say, only while you’re actively recording. We don’t store it (see below).
 
